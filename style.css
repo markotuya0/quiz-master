@@ -451,3 +451,38 @@ footer button.show{
     color: #fff;
     background: #000;
 }
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    section {
+        padding: 7.125rem;
+}
+
+.quiz_box header {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 25px 0 69px;
+}
+
+.quiz_box header .title {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 25px 0 25px;
+}
+footer .total_que span {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 4px 0 69px;
+}
+
+.quiz_box header .timer .time_left_txt {
+    display: flex;
+    justify-content: space-between;
+}
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .info_box.activeInfo {
+}
+}
