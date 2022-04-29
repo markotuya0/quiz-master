@@ -1,33 +1,72 @@
 
-.topnav {
-    overflow: hidden;
-    background-color: #000;
+* {
+    box-sizing: border-box;
   }
   
-  
-  .topnav a {
-    float: right;
-    color: #e1e7ed;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  body {
+    margin: 0;
+    font-family: Arial;
     font-size: 17px;
   }
   
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
   }
   
-  .topnav a.active {
-    color: white;
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
   }
   
+  
+  .navigation{
+    padding-top:30px;
+    padding-bottom:30px;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1;
+  }
+  
+  .navbar-right{
+    float:right;
+    padding-right:10%;
+  }
+  
+  .navbar-right a{
+    text-decoration:none;
+    padding:10px;
+    color: #fff;
+    font-family:Arial;
+    font-weight:900;
+  }
+  
+  .navbar-right a:hover{
+    text-decoration:underline;
+  }
   #logo {
     float:left;
         margin: auto;
     width: 3.5em;
   }
+
+  .navbar-logo{
+    padding-left:3%;
+    font-family:Arial;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff; 
+  }
+  
 
 /* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -39,7 +78,7 @@
 }
 
 body{
-    background: #06113C;
+    background: #e5e6eb;
 }
 
 ::selection{
@@ -81,7 +120,7 @@ body{
 }
 
 .info_box{
-    width: 540px;
+
     background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
@@ -412,4 +451,3 @@ footer button.show{
     color: #fff;
     background: #000;
 }
-

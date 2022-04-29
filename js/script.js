@@ -1,5 +1,7 @@
 var soundCorrect = new Audio("sounds/sound_correct.mp3");
 var soundIncorrect = new Audio("sounds/sound_incorrect.mp3");
+var soundWin = new Audio("sounds/soundWin.mp3");
+var soundLoose = new Audio("sounds/soundLoose.mp3");
 
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
@@ -159,14 +161,17 @@ function showResult(){
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>and congrats! 🎉, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
+        soundWin.play();
     }
     else if(userScore > 1){ // if user scored more than 1
-        let scoreTag = '<span>and nice 😎, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span> try again 😐 😐 😐, You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
+        soundLoose.play();
     }
     else{ // if user scored less than 1
-        let scoreTag = '<span>and sorry 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
+        let scoreTag = '<span>and sorry 😐 😐 😐, You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
+        soundLoose.play();
 
         
     }
